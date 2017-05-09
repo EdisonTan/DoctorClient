@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:showDividers="middle"
+    android:id="@+id/layout_swipe">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4">
+
+
+        <TextView
+            android:text="2017年4月1日 14:38:42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_swipe"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+        <TextView
+            android:gravity="center"
+            android:text="服务单号："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <TextView
+            android:gravity="center"
+            android:text="00000001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/number_swipe"
+            android:layout_weight="1" />
+        <TextView
+            android:gravity="center"
+            android:text="删除"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete_swipe"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="80dp"
+
+        android:clickable="true">
+
+        <!-- Bottom View Start-->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@color/md_white_1000"
+            android:id="@+id/bottom_wrapper"
+            android:layout_width="160dp"
+            android:weightSum="3"
+            android:layout_height="match_parent">
+            <!--What you want to show-->
+            <ImageButton
+                android:background="@color/md_white_1000"
+                android:id="@+id/play_pause_bottom_swipe"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/play_pause"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:background="@color/md_white_1000"
+                android:id="@+id/stop_bottom_swipe"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/stop"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:background="@color/md_white_1000"
+                android:id="@+id/details_bottom_swipe"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/details"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+        <!-- Bottom View End-->
+
+        <!-- Surface View Start -->
+        <LinearLayout
+
+            android:divider="@drawable/divider"
+            android:showDividers="middle"
+
+            android:padding="10dp"
+            android:background="@color/colorThinking5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:weightSum="10">
+            <!--What you want to show in SurfaceView-->
+
+            <TextView
+                android:text="张三"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/name_swipe"
+                android:gravity="center"
+                android:layout_weight="4" />
+            <TextView
+                android:text="￥10.00"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/money_amount_swipe"
+                android:gravity="center"
+                android:layout_weight="2" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:weightSum="2"
+                        android:id="@+id/accepted_layout_swipe">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:id="@+id/specified_content_swipe"
+                            android:layout_weight="1"
+                            android:text="查看内容"/>
+
+                        <FrameLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <!-- 我们要在这里添加等待用户动作的状态，一种是没有做出选择，二种接受或者拒绝-->
+                            <LinearLayout
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                android:id="@+id/unhandled_state_swipe"
+                                android:visibility="visible">
+                                <TextView
+                                    android:clickable="true"
+                                    android:id="@+id/accept_swipe"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="接受"/>
+                                <TextView
+                                    android:clickable="true"
+                                    android:id="@+id/refuse_swipe"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="拒绝"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:visibility="invisible"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/handled_state_swipe"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:id="@+id/choice_swipe"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="已接受"/>
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="2">
+                    <TextView
+                        android:text="未诊断"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/auscultation_statement_all_layout"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:text="待收款"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/payment_statement_all_layout"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/more_swipe"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:src="@drawable/more"/>-->
+        </LinearLayout>
+
+        <!-- Surface View End -->
+    </com.daimajia.swipe.SwipeLayout>
+</LinearLayout>

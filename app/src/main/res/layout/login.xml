@@ -1,0 +1,130 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+     >
+
+	<LinearLayout
+		android:layout_width="300dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center">
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:src="@mipmap/ic"
+			/>
+	</LinearLayout>
+        
+    <LinearLayout android:layout_width="300dp"
+    	android:layout_height="wrap_content"
+		android:layout_gravity="center"
+    	android:background="@drawable/layoutbg"
+    	android:orientation="vertical" >
+		<TextView
+			android:gravity="center"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="医生端"/>
+
+    
+	    <LinearLayout
+			android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal"
+	    	android:layout_margin="0dp"
+			android:padding="1dp"
+	    	android:gravity="center"
+	    	android:background="@drawable/layoutbg" >
+	        
+	        <EditText
+				android:id="@+id/name_et"
+	            android:layout_width="0dp"
+	    		android:layout_height="wrap_content"
+	    		android:layout_weight="16"
+	    		android:hint="请输入账号"
+	    		android:singleLine="true"
+	    		android:background="#ffffff" />
+	        
+	        <ImageView android:id="@+id/name_iv"
+	            android:layout_width="0dp"
+	    		android:layout_height="wrap_content"
+	    		android:layout_weight="1"
+	    		android:gravity="center"
+	    		android:src="@drawable/cancel"
+	    		android:visibility="invisible" />
+	        
+	    </LinearLayout>
+	    
+	    <LinearLayout
+			android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal"
+	    	android:layout_margin="0dp"
+			android:padding="1dp"
+	    	android:gravity="center"
+			android:background="@drawable/layoutbg">
+	        
+	        <EditText android:id="@+id/pwd_et"
+	            android:layout_width="0dp"
+	    		android:layout_height="wrap_content"
+	    		android:layout_weight="16"
+	    		android:hint="请输入密码"
+	    		android:singleLine="true"
+	    		android:background="#ffffff"
+	    		android:inputType="textPassword" />
+	        
+	        <ImageView android:id="@+id/pwd_iv"
+	            android:layout_width="0dp"
+	    		android:layout_height="wrap_content"
+	    		android:layout_weight="1"
+	    		android:gravity="center"
+	    		android:src="@drawable/cancel"
+	    		android:visibility="invisible" />
+	        
+	    </LinearLayout>
+    </LinearLayout>
+	<LinearLayout
+		android:layout_width="300dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center">
+		<CheckBox
+			android:id="@+id/remember_password"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:text="记住密码"/>
+		<CheckBox
+			android:id="@+id/login_auto"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:text="自动登录"/>
+
+	</LinearLayout>
+
+    <TextView android:id="@+id/log"
+        android:layout_marginTop="6dp"
+        android:layout_width="300dp"
+    	android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:background="#ff7000"
+    	android:text="登          录"
+    	android:textSize="24sp"
+    	android:textColor="#ffffff"
+    	android:gravity="center" />
+
+    <TextView android:id="@+id/gotoreg"
+        android:layout_marginTop="16dp"
+        android:layout_width="300dp"
+    	android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:background="#ffffff"
+    	android:text="没有帐号?赶快注册吧"
+    	android:textSize="18sp"
+    	android:textColor="#0000aa"
+    	android:gravity="center" />
+
+</LinearLayout>

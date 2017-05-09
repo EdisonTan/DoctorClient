@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorThinking1">#dbcbb8</color>
+    <color name="colorThinking2">#ffffff</color>
+    <color name="colorThinking3">#bfbfbf</color>
+    <color name="colorThinking4">#81c2d6</color>
+    <color name="colorThinking5">#bfbfbf</color>
+    <color name="colorThinking6">#81c2d6</color>
+    <color name="sandybrown">#f4a460</color> <!-- 沙褐色 -->
+</resources>
